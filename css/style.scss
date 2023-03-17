@@ -1,0 +1,140 @@
+$Black: #2b2b2b;
+$DarkGray: #505050;
+$LightGray: #dbdbdb;
+$White: #f7f7f7;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+html {
+  font-size: 8px;
+}
+body {
+  width: 100%;
+  font-size: 2rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
+  color: $Black;
+  background: $White;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: lowercase;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  padding-top: 1rem;
+  z-index: 800;
+  border-bottom: 2px solid $Black;
+  background: $White;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 5rem;
+}
+.header-sitename {
+  font-size: 3rem;
+  font-weight: 800;
+  a {
+    padding: 0 1rem;
+  }
+}
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+.header-nav-link {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  li {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-3deg);
+      content: '';
+      width: 0;
+      height: 2px;
+      background: $Black;
+      z-index: -1;
+      transition: all .3s;
+    }
+    &:has(a:hover)::after {
+      width: calc(100% + 4px);
+      height: 2px;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: .5rem 1rem;
+    }
+  }
+}
+.header-nav-icon {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  background: $White;
+  border: 2px solid $Black;
+  box-sizing: content-box;
+  box-shadow: 0 0 0 $Black;
+  transition: all .2s;
+  &:has(a:hover) {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0 $Black;
+  }
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem;
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+main {
+  width: 100%;
+  max-width: 1100px;
+  min-height: calc(100vh - 6rem);
+  margin: 6rem auto 0;
+  background: lightblue;
+}
+.first-page-section {
+  width: 100%;
+  height: calc(100vh - 6rem);
+  background: pink;
+}
+
+footer {
+  width: 100%;
+  background: lightcoral;
+}
