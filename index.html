@@ -20,14 +20,19 @@
       </h1>
       <nav class="header-nav">
         <ul class="header-nav-link">
-          <li class="current"><a href="#works">home</a></li>
+          <li class="current"><a href="#top">home</a></li>
           <li><a href="#works">works</a></li>
           <li><a href="#about">about</a></li>
           <li><a href="#contact">contact</a></li>
         </ul>
         <div class="header-nav-icon">
-          <a href="https://twitter.com/moliyuzuha">
+          <a href="https://twitter.com/moliyuzuha" target="_blank">
             <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+        <div class="header-nav-icon">
+          <a href="https://github.com/moliyuzuha" target="_blank">
+            <i class="fa-brands fa-github-alt"></i>
           </a>
         </div>
       </nav>
@@ -37,21 +42,103 @@
   <main>
     <!-- first page  -->
     <section class="first-page-section">
+      <div class="first-page-img">
+        <img src="/img/top-img.svg">
+      </div>
       <div class="first-page-text">
         <div class="message">welcome!</div>
-        <div class="name">I am <em>moli</em></div>
-        <div class="introduce">I'm an engineer.</div>
+        <div class="name">I am <em>moli</em>.</div>
+        <div class="introduce">I'm a web engineer based in Japan.</div>
       </div>
     </section>
 
     <!-- works -->
     <section id="works" class="works-section">
-      <div>work section</div>
+      <h2 class="index-h2">works</h2>
+      <ul class="works-list">
+        <li>
+          <a href="/">
+            <div class="works-thumbnail"><img src=""></div>
+            <div class="works-info">
+              <div class="works-title">
+                <h3>AddWorks</h3>
+                <aside>個人サイト向けの画像・書籍ビューア設置用スクリプト</aside>
+              </div>
+              <div class="works-caption">
+                HTML・CSS・JavaScript
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <div class="works-thumbnail"><img src=""></div>
+            <div class="works-info">
+              <div class="works-title">
+                <h3>制作物名</h3>
+                <aside>制作物の紹介</aside>
+              </div>
+              <div class="works-caption">
+                キャプション
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <div class="works-thumbnail"><img src=""></div>
+            <div class="works-info">
+              <div class="works-title">
+                <h3>制作物名</h3>
+                <aside>制作物の紹介</aside>
+              </div>
+              <div class="works-caption">
+                キャプション
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="dummy">
+          <a>
+            
+          </a>
+        </li>
+      </ul>
+      <div class="btn-more">
+        <a href="/"><div>view more</div></a>
+      </div>
     </section>
 
     <!-- about -->
     <section id="about" class="about-section">
-      <div>about section</div>
+      <div class="about-container">
+        <h2 class="index-h2">about</h2>
+        <div class="about-content">
+          <div class="about-icon"><img src="/img/profile_icon.png"></div>
+          <div class="about-info">
+            <div class="about-info-top">
+              <h3 class="about-name">moli</h3>
+              <div>
+                <div class="header-nav-icon">
+                  <a href="https://twitter.com/moli\shorts\MRDjfmX_nzsyuzuha">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </div>
+                <div class="header-nav-icon">
+                  <a href="https://github.com/moliyuzuha" target="_blank">
+                    <i class="fa-brands fa-github-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="about-info-bottom">
+              <p>岡山県出身のWebエンジニア。</p>
+              <p>Webデザイン・コーディングとフロントエンドが得意です。</p>
+              <p>趣味で同人誌のタイトルロゴ・表紙などのデザインを担当した経験もあります。</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- contact -->
@@ -95,5 +182,6 @@
 
   <!-- js -->
   <script src="https://kit.fontawesome.com/2e55d70e46.js" crossorigin="anonymous"></script>
+  <script src="/js/mainscript.js"></script>
 </body>
 </html>

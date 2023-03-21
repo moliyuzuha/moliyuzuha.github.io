@@ -1,7 +1,8 @@
 $Black: #2b2b2b;
-$DarkGray: #505050;
+$DarkGray: #6b6b6b;
 $LightGray: #dbdbdb;
 $White: #f7f7f7;
+$LightShadow: #e2e2e2;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap');
 
@@ -34,7 +35,7 @@ header {
   height: 7rem;
   padding-top: 1rem;
   z-index: 800;
-  border-bottom: 2px solid $Black;
+  border-bottom: 3px solid $Black;
   background: $White;
 }
 .header {
@@ -57,7 +58,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 .header-nav-link {
   display: flex;
@@ -93,7 +94,6 @@ header {
   }
 }
 .header-nav-icon {
-  position: relative;
   width: 4rem;
   height: 4rem;
   border-radius: 4rem;
@@ -126,14 +126,245 @@ main {
   max-width: 1100px;
   min-height: calc(100vh - 6rem);
   margin: 6rem auto 0;
-  background: lightblue;
 }
 .first-page-section {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
   width: 100%;
   height: calc(100vh - 6rem);
-  background: pink;
 }
-
+.first-page-img, 
+.first-page-text {
+  width: 45%;
+}
+.first-page-img {
+  position: relative;
+  img {
+    border-radius: 100%;
+    border: 3px solid $Black;
+    box-shadow: 1rem 1rem 0 $Black;
+  }
+}
+.first-page-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  .message {
+    font-size: 10rem;
+    text-transform: capitalize;
+  }
+  .name {
+    font-size: 10rem;
+    em {
+      font-weight: 800;
+      letter-spacing: .05em;
+    }
+  }
+  .introduce {
+    font-size: 3rem;
+  }
+}
+.works-section {
+  width: 100%;
+  padding: 6rem 0;
+}
+.index-h2 {
+  margin: 2rem auto 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+.works-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-bottom: 6rem;
+  li {
+    width: calc((100% - 5rem) / 2);
+    aspect-ratio: 1 / 1;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border: 3px solid $Black;
+    border-radius: 1rem;
+    transition: all .2s;
+    box-shadow: 0 0 0 $Black;
+    &:has(a:hover) {
+      box-shadow: 1rem 1rem 0 $Black;
+      transform: translate(-1rem, -1rem);
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .dummy {
+    border-color: transparent;
+    &:has(a:hover) {
+      box-shadow: none;
+      transform: none;
+    }
+  }
+}
+.works-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: $LightGray;
+  border-radius: 1rem 1rem 0 0;
+}
+.works-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.works-title h3 {
+  font-family: 'Montserrat','Noto Sans JP', sans-serif;
+  font-size: 7rem;
+  font-weight: 700;
+}
+.works-title aside {
+  color: $DarkGray;
+}
+.works-caption {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.btn-more {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: $Black;
+  a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 220px;
+    padding: 10px 25px;
+    color: $Black;
+    transition: 0.3s ease-in-out;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    transform: skew(-10deg, 0deg);
+    border: 3px solid $Black;
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(50% - 2px);
+      right: -1.5em;
+      transform: translateY(calc(-50% - 1px)) rotate(30deg);
+      width: 12px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: $Black;
+      transition: all .3s;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -1.5em;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 3px;
+      border-radius:32px;
+      background-color: #333;
+      transition: all .3s;
+    }
+    &:hover::before,
+    &:hover::after {
+      right: -2.5em;
+    }
+    div {
+      position: relative;
+      transform: skewX(10deg);
+      &::after {
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%) skew(-10deg, 0deg);
+        content: '';
+        width: 110%;
+        height: 0;
+        background: $LightGray;
+        opacity: 0;
+        z-index: -1;
+        transition: all .3s;
+      }
+    }
+    &:hover div::after {
+      height: 10px;
+      opacity: 1;
+    }
+  }
+}
+.about-section {
+  width: 100%;
+  padding: 10rem 0 6rem;
+}
+.about-container {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  background: $LightShadow;
+  border: 3px solid $Black;
+  box-shadow: 1rem 1rem 0 $Black;
+}
+.about-content {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+  padding: 1rem 2rem 4rem;
+}
+.about-icon {
+  width: 20rem;
+  img {
+    width: 100%;
+    border-radius: 100%;
+    border: 3px solid $Black;
+    box-shadow: 1rem 1rem 0 $Black;
+  }
+}
+.about-info {
+  flex: 1;
+}
+.about-info-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.about-name {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+.contact-section {
+  width: 100%;
+  padding: 10rem 0 6rem;
+}
 footer {
   width: 100%;
   background: lightcoral;
