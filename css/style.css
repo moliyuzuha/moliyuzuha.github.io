@@ -176,7 +176,7 @@ main {
 }
 
 .index-h2 {
-  margin: 2rem auto 3rem;
+  margin: 2rem auto 4rem;
   font-family: "Montserrat", sans-serif;
   font-size: 8rem;
   font-weight: 800;
@@ -341,11 +341,12 @@ main {
 .about-content {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 5rem;
   width: 100%;
   max-width: 720px;
   margin: auto;
-  padding: 1rem 2rem 4rem;
+  padding: 0 2rem 4rem;
 }
 
 .about-icon {
@@ -383,10 +384,120 @@ main {
 
 .contact-section {
   width: 100%;
-  padding: 10rem 0 6rem;
+  padding: 10rem 0;
+}
+
+.contact-content {
+  max-width: 70rem;
+  margin: auto;
+}
+
+.mail-address-area {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  padding: 3rem 10rem;
+  margin: 5rem auto 2rem;
+  border-radius: 1rem;
+  border: 3px solid #2b2b2b;
+  box-shadow: 1rem 1rem 0 #2b2b2b;
+  background: #dbdbdb;
+  text-align: center;
+}
+.mail-address-area .caption {
+  margin-top: 1rem;
+  color: #6b6b6b;
+}
+
+.mail-address {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
   width: 100%;
-  background: lightcoral;
+  color: #f7f7f7;
+  background: #2b2b2b;
+  padding: 10rem 0 3rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer-siteinfo {
+  text-align: center;
+}
+
+.footer-sitename {
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+}
+
+.footer-siteinfo aside {
+  margin-top: 2rem;
+  color: #6b6b6b;
+  font-family: "Montserrat", sans-serif;
+}
+.footer-siteinfo aside p {
+  margin-bottom: 1rem;
+}
+
+.footer-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.footer-nav-link li a:hover {
+  border-bottom: 2px solid #f7f7f7;
+}
+
+.footer-sns-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 3rem;
+}
+
+.footer-nav-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  border: 2px solid #f7f7f7;
+  transition: all 0.2s;
+}
+.footer-nav-icon:has(a:hover) {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 #f7f7f7;
+}
+.footer-nav-icon a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  text-align: center;
+}
+.footer-nav-icon a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.copyright {
+  color: #6b6b6b;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
