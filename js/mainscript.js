@@ -20,3 +20,28 @@ scrollLinks.forEach((scrollLink) => {
     });
   });
 });
+
+// BACK TO TOP LINK
+window.onscroll = scrollAppearing;
+function scrollAppearing() {
+  const windowHeight = window.innerHeight;
+  const userScroll = window.scrollY;
+  const backToTopLink = document.getElementById('back-to-top');
+  
+  if (userScroll >= windowHeight) {
+    backToTopLink.classList.add('back-to-top-appear');
+  } else {
+    backToTopLink.classList.remove('back-to-top-appear');
+  }
+}
+
+// COPY E-MAIL ADDRESS
+const emailAddress = 'moliyuzuha@gmail.com';
+const copyButtonEmail = document.getElementById('copy-button-email');
+copyButtonEmail.addEventListener('click', function() {
+  navigator.clipboard.writeText(emailAddress);
+  document.getElementById('copy-success').classList.add('appear');
+  window.setTimeout(function(){
+    document.getElementById('copy-success').classList.remove('appear');
+  }, 2000);
+});
