@@ -16,7 +16,7 @@
   <header id="header">
     <div class="header">
       <h1 class="header-sitename">
-        <a href="#top">moli</a>
+        <a href="/index.html#top">moli</a>
       </h1>
       <nav class="header-nav">
         <ul class="header-nav-link">
@@ -40,6 +40,78 @@
   </header>
 
   <main>
+    <!-- title & picture -->
+    <section class="top-container">
+      <div class="thumbnail-area">
+        <img src="/img/dummy.png">
+      </div>
+      <div class="title-area">
+        <h2>Add Works</h2>
+        <div class="languages">
+          <h3>使用言語・ツール</h3>
+          <ul class="languages-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+      </div>
+      <div class="link-area">
+        <div class="link-btn demo">
+          <a href="">demo</a>
+        </div>
+        <div class="link-btn download">
+          <a href="">Download</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-container">
+      <h3>overview</h3>
+      <div class="text-area">
+        <p>Webサイト向け画像・書籍ビューア設置スクリプトです。</p>
+        <p>中身を編集するのは<em>1ファイルだけ</em>！フォルダを複製してフォルダ名変更&画像をフォルダ内にアップロードするだけで、閲覧画面を自動生成します。</p>
+        <p>サイトの情報やヘッダー・フッターのリンク設定、カスタマイズなどは、初期設定ファイルを編集するだけで全ページに反映します。</p>
+        <p>カスタマイズ用のcssファイルを編集することで、自由にご自身のWebサイトに合わせた外観にすることができます。</p>
+        <p>※画像が重い場合など、読み込み時に一瞬画面崩れが発生する場合があります。気になる場合は、読み込みのタイミングでロード画面を挟むのがおすすめです。</p>
+      </div>
+      <h3>file organization</h3>
+      <div class="text-area">
+        <table>
+          <tr>
+            <th>file name</th>
+            <th>content</th>
+          </tr>
+          <tr>
+            <td>work/</td>
+            <td>このファイルごとWebサイトのルートディレクトリ(index.htmlがある階層)に設置してください。</td>
+          </tr>
+          <tr>
+            <td>AddWorks/</td>
+            <td>スクリプト本体。このフォルダ内のファイルは基本的に編集しないでください。わかる人は自己責任で自由に改造して大丈夫です。</td>
+          </tr>
+          <tr>
+            <td>settings/</td>
+            <td>設定用フォルダ。編集するのは基本的にこのフォルダ内のファイルだけです。</td>
+          </tr>
+          <tr>
+            <td>settings/custom.css</td>
+            <td>スクリプトのCSSを編集したいときは、意図せぬエラーを回避するため、ここに追加する形で記述してください。</td>
+          </tr>
+          <tr>
+            <td>settings/sitedata.js</td>
+            <td>サイト全体の設定用ファイル。metaタグやファビコン、ヘッダー、フッターのカスタマイズはここでできます。</td>
+          </tr>
+          <tr>
+            <td>settings/workmanager.js</td>
+            <td>作品データファイル。作品を追加するたびに必要事項を追記すると、自動でビューアを生成します。</td>
+          </tr>
+          <tr>
+            <td>230101/ & 230102/</td>
+            <td>作品ファイル。作品の日付をYYMMDD形式でフォルダ名に設定します。work/YYMMDD/view.htmlがビューアのURLになります。view.htmlはコピーするだけ。変更するのはフォルダ名と、imgフォルダへの画像追加のみです。あとはworkmanager.jsファイル内のデータを元にview.htmlを生成します。</td>
+          </tr>
+        </table>
+    </section>
     
     <!-- back to top -->
     <div id="back-to-top" class="back-to-top">

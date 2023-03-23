@@ -222,8 +222,13 @@ main {
 .works-thumbnail {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: $LightGray;
   border-radius: 1rem 1rem 0 0;
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+  }
 }
 .works-info {
   flex: 1;
@@ -445,9 +450,11 @@ main {
   background: $White;
   box-shadow: 0 0 0 $Black;
   opacity: 0;
+  pointer-events: none;
   transition: all .2s;
   &.back-to-top-appear {
     opacity: 1;
+    pointer-events: inherit;
   }
   &:has(a:hover) {
     box-shadow: 4px 4px 0 $Black;
@@ -546,3 +553,5 @@ footer {
   color: $DarkGray;
   text-align: center;
 }
+
+// work view style

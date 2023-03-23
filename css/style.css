@@ -230,7 +230,13 @@ main {
 .works-thumbnail {
   width: 100%;
   aspect-ratio: 16/9;
-  background: #dbdbdb;
+  border-radius: 1rem 1rem 0 0;
+}
+.works-thumbnail img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 1rem 1rem 0 0;
 }
 
@@ -471,10 +477,12 @@ main {
   background: #f7f7f7;
   box-shadow: 0 0 0 #2b2b2b;
   opacity: 0;
+  pointer-events: none;
   transition: all 0.2s;
 }
 .back-to-top.back-to-top-appear {
   opacity: 1;
+  pointer-events: inherit;
 }
 .back-to-top:has(a:hover) {
   box-shadow: 4px 4px 0 #2b2b2b;
