@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;700&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;700;800&display=swap");
 html {
   font-size: 8px;
 }
@@ -588,4 +589,162 @@ footer {
 .copyright {
   color: #6b6b6b;
   text-align: center;
+}
+
+.top-container,
+.bottom-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.top-container {
+  padding: 4rem 0;
+}
+
+.thumbnail-area {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.thumbnail-area img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  outline: 3px solid #2b2b2b;
+}
+
+.title-area h2 {
+  margin: 1rem auto 0;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.title-area .languages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  color: #6b6b6b;
+}
+.title-area .languages h3::after {
+  content: "：";
+}
+.title-area .languages-list {
+  display: flex;
+  flex-direction: row;
+}
+.title-area .languages-list li:not(:last-child)::after {
+  content: "・";
+}
+
+.link-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.link-btn {
+  min-width: 20rem;
+  border-radius: 100rem;
+  border: 3px solid #2b2b2b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 #2b2b2b;
+  transition: all 0.2s;
+}
+.link-btn.demo {
+  color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  background: #2b2b2b;
+}
+.link-btn:has(a:hover) {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 #2b2b2b;
+}
+.link-btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 3rem;
+  border-radius: 100rem;
+  text-align: center;
+}
+
+.bottom-container h3 {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem 0 2rem;
+  padding: 0.5rem 2rem 0;
+  color: #f7f7f7;
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.bottom-container h3::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #2b2b2b;
+  z-index: -1;
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.8, 0, 0.68, 0.99);
+}
+@keyframes fadeIn {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.bottom-container .text-area {
+  margin-bottom: 5rem;
+}
+.bottom-container .text-area h4 {
+  margin: 2rem 0 2rem;
+  padding-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 3px solid #2b2b2b;
+}
+.bottom-container .text-area ol {
+  counter-reset: item;
+  margin: 3rem 4rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  border: 3px solid #2b2b2b;
+}
+.bottom-container .text-area ol li {
+  text-indent: -3rem;
+  padding-left: 5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.bottom-container .text-area ol li:last-child {
+  margin-bottom: 0;
+}
+.bottom-container .text-area ol li::before {
+  counter-increment: item;
+  content: counter(item) ".";
+  padding-right: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.bottom-container .text-area p {
+  margin-bottom: 0.5rem;
+}
+.bottom-container .text-area em {
+  font-weight: 800;
 }/*# sourceMappingURL=style.css.map */
