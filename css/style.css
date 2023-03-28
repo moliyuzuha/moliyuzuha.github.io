@@ -658,7 +658,6 @@ footer {
 }
 .link-btn.demo {
   color: #f7f7f7;
-  border: 1px solid #f7f7f7;
   background: #2b2b2b;
 }
 .link-btn:has(a:hover) {
@@ -714,37 +713,90 @@ footer {
   margin-bottom: 5rem;
 }
 .bottom-container .text-area h4 {
-  margin: 2rem 0 2rem;
+  margin: 3rem 0 2rem;
   padding-bottom: 0.5rem;
   font-size: 2.5rem;
   font-weight: 700;
   border-bottom: 3px solid #2b2b2b;
 }
+.bottom-container .text-area ul:not(.table-list),
 .bottom-container .text-area ol {
-  counter-reset: item;
-  margin: 3rem 4rem;
+  margin: 2rem 3rem;
   padding: 3rem;
   border-radius: 1rem;
   border: 3px solid #2b2b2b;
 }
+.bottom-container .text-area ul:not(.table-list) li,
 .bottom-container .text-area ol li {
   text-indent: -3rem;
   padding-left: 5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
+.bottom-container .text-area ul:not(.table-list) li:last-child,
 .bottom-container .text-area ol li:last-child {
   margin-bottom: 0;
+}
+.bottom-container .text-area ul:not(.table-list) li::before,
+.bottom-container .text-area ol li::before {
+  padding-right: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.bottom-container .text-area ul:not(.table-list) li::before {
+  content: "・";
+}
+.bottom-container .text-area ol {
+  counter-reset: item;
 }
 .bottom-container .text-area ol li::before {
   counter-increment: item;
   content: counter(item) ".";
-  padding-right: 1rem;
-  font-family: "Montserrat", sans-serif;
 }
 .bottom-container .text-area p {
   margin-bottom: 0.5rem;
 }
 .bottom-container .text-area em {
   font-weight: 800;
+}
+.bottom-container .text-area table {
+  margin: 2rem 0;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 1rem;
+  border: 3px solid #2b2b2b;
+}
+.bottom-container .text-area tr:not(:first-child) th {
+  border-right: 2px solid #dbdbdb;
+}
+.bottom-container .text-area tr:not(:last-child) th,
+.bottom-container .text-area tr:not(:last-child) td {
+  border-bottom: 2px solid #2b2b2b;
+}
+.bottom-container .text-area th,
+.bottom-container .text-area td {
+  padding: 1rem 2rem;
+}
+.bottom-container .text-area tr:first-child th,
+.bottom-container .text-area tr:first-child td {
+  color: #f7f7f7;
+  background: #2b2b2b;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.bottom-container .text-area th {
+  width: 30%;
+  max-width: 30%;
+  font-family: "Montserrat", sans-serif;
+}
+.bottom-container .text-area th span {
+  display: inline-block;
+}
+.bottom-container .text-area .table-list li {
+  margin-bottom: 1rem;
+}
+.bottom-container .text-area .table-list li:not(:last-child)::after {
+  content: " ,";
 }/*# sourceMappingURL=style.css.map */

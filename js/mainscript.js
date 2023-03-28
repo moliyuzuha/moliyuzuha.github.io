@@ -28,7 +28,7 @@ function scrollAppearing() {
   const userScroll = window.scrollY;
   const backToTopLink = document.getElementById('back-to-top');
   
-  if (userScroll >= windowHeight) {
+  if (userScroll >= windowHeight / 2) {
     backToTopLink.classList.add('back-to-top-appear');
   } else {
     backToTopLink.classList.remove('back-to-top-appear');

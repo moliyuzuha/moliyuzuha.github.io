@@ -617,7 +617,6 @@ padding: 4rem 0;
   transition: all .2s;
   &.demo {
     color: $White;
-    border: 1px solid $White;
     background: $Black;
   }
   &:has(a:hover) {
@@ -672,15 +671,15 @@ padding: 4rem 0;
   .text-area {
     margin-bottom: 5rem;
     h4 {
-      margin: 2rem 0 2rem;
+      margin: 3rem 0 2rem;
       padding-bottom: .5rem;
       font-size: 2.5rem;
       font-weight: 700;
       border-bottom: 3px solid $Black;
     }
+    ul:not(.table-list),
     ol {
-      counter-reset: item;
-      margin: 3rem 4rem;
+      margin: 2rem 3rem;
       padding: 3rem;
       border-radius: 1rem;
       border: 3px solid $Black;
@@ -689,15 +688,23 @@ padding: 4rem 0;
         padding-left: 5rem;
         margin-bottom: 1rem;
         font-weight: 700;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::before {
+          padding-right: 1rem;
+          font-family: 'Montserrat', sans-serif;
+        }
       }
-      li:last-child {
-        margin-bottom: 0;
-      }
+    }
+    ul:not(.table-list) li::before {
+      content: '・';
+    }
+    ol {
+      counter-reset: item;
       li::before {
         counter-increment: item;
         content: counter(item)'.';
-        padding-right: 1rem;
-        font-family: 'Montserrat', sans-serif;
       }
     }
     p {
@@ -705,6 +712,48 @@ padding: 4rem 0;
     }
     em {
       font-weight: 800;
+    }
+    table {
+      margin: 2rem 0;
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: separate;
+      border-radius: 1rem;
+      border: 3px solid $Black
+    }
+    tr:not(:first-child) th {
+      border-right: 2px solid $LightGray;
+    }
+    tr:not(:last-child) th,
+    tr:not(:last-child) td {
+      border-bottom: 2px solid $Black;
+    }
+    th,
+    td {
+      padding: 1rem 2rem;
+    }
+    tr:first-child th,
+    tr:first-child td {
+      color: $White;
+      background: $Black;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    th {
+      width: 30%;
+      max-width: 30%;
+      font-family: 'Montserrat', sans-serif;
+      span {
+        display: inline-block;
+      }
+    }
+    .table-list li {
+      margin-bottom: 1rem;
+      &:not(:last-child)::after {
+        content: ' ,';
+      }
     }
   }
 }

@@ -1,73 +1,17 @@
-<!DOCTYPE html>
-<html lang="jp">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>moli</title>
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <!-- page top position -->
-  <div id="top"></div>
+const worksList = [
+  {
+    fileName: 'addworks',
+    workName: 'AddWorks',
+    lang: [
+                'HTML',
+                'CSS(Sass)',
+                'JavaScript'
+              ],
+    demoLink: '/',
+    downloadLink: '/',
 
-  <!-- header -->
-  <header id="header">
-    <div class="header">
-      <h1 class="header-sitename">
-        <a href="/index.html#top">moli</a>
-      </h1>
-      <nav class="header-nav">
-        <ul class="header-nav-link">
-          <li><a href="/index.html#top">home</a></li>
-          <li><a href="/index.html#works">works</a></li>
-          <li><a href="/index.html#about">about</a></li>
-          <li><a href="/index.html#contact">contact</a></li>
-        </ul>
-        <div class="header-nav-icon">
-          <a href="https://twitter.com/moliyuzuha" target="_blank">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </div>
-        <div class="header-nav-icon">
-          <a href="https://github.com/moliyuzuha" target="_blank">
-            <i class="fa-brands fa-github-alt"></i>
-          </a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- title & picture -->
-    <section class="top-container">
-      <div class="thumbnail-area">
-        <img src="/img/dummy.png">
-      </div>
-      <div class="title-area">
-        <h2>AddWorks</h2>
-        <div class="languages">
-          <h3>使用言語・ツール</h3>
-          <ul class="languages-list">
-            <li>HTML</li>
-            <li>CSS(Sass)</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
-      </div>
-      <div class="link-area">
-        <div class="link-btn demo">
-          <a href="">demo</a>
-        </div>
-        <div class="link-btn download">
-          <a href="">Download</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="bottom-container">
-      <h3>overview</h3>
+    mainContent: `
+    <h3>overview</h3>
       <div class="text-area">
         <p>Webサイト向け画像・書籍ビューア設置スクリプトです。</p>
         <p>なるべく簡単な手順で作品の追加・編集ができるように作りました。<em>コードは全く書かずに、テキスト編集だけで</em>作品閲覧画面を自動生成できます。</p>
@@ -185,56 +129,6 @@
           </tr>
         </table>
       </div>
-    </section>
-    
-    <!-- back to top -->
-    <div id="back-to-top" class="back-to-top">
-      <a href="#top">
-        <i class="fa-solid fa-chevron-up"></i>
-      </a>
-    </div>
-  </main>
-
-  <!-- footer -->
-  <footer id="footer">
-    <div class="footer">
-      <div class="footer-siteinfo">
-        <h1 class="footer-sitename">
-          <a href="/index.html#top">moli</a>
-        </h1>
-        <aside>
-          <p>Web Engineer</p>
-          <p>moli's Portfolio</p>
-        </aside>
-      </div>
-      <nav class="footer-nav">
-        <ul class="footer-nav-link">
-          <li><a href="/index.html#top">Home - トップページ</a></li>
-          <li><a href="/index.html#works">Works - 作品</a></li>
-          <li><a href="/index.html#about">About - 自己紹介</a></li>
-          <li><a href="/index.html#contact">Contact - お問い合わせ</a></li>
-        </ul>
-      </nav>
-      <div class="footer-sns-list">
-        <div class="footer-nav-icon">
-          <a href="https://twitter.com/moliyuzuha">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-        </div>
-        <div class="footer-nav-icon">
-          <a href="https://github.com/moliyuzuha" target="_blank">
-            <i class="fa-brands fa-github-alt"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="copyright">© 2023 moli</div>
-  </footer>
-
-  <!-- js -->
-  <script src="https://kit.fontawesome.com/2e55d70e46.js" crossorigin="anonymous"></script>
-  <script src="/js/mainscript.js"></script>
-  <script src="/js/works-data.js"></script>
-  <script src="/js/workPage.js"></script>
-</body>
-</html>
+    `
+  }
+]
