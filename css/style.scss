@@ -591,7 +591,7 @@ padding: 4rem 0;
       content: '：';
     }
   }
-  .languages-list {
+  .language-list {
     display: flex;
     flex-direction: row;
     li:not(:last-child)::after {
@@ -633,6 +633,7 @@ padding: 4rem 0;
   }
 }
 .bottom-container {
+  margin-bottom: 10rem;
   h3 {
     position: relative;
     width: fit-content;
@@ -651,10 +652,10 @@ padding: 4rem 0;
       width: 100%;
       height: 100%;
       background: $Black;
-      z-index: -1;
+      z-index: -1;/*
       animation-name: fadeIn;
       animation-duration: .8s;
-      animation-timing-function: cubic-bezier(.8,0,.68,.99);
+      animation-timing-function: cubic-bezier(.8,0,.68,.99);*/
     }
   }
   @keyframes fadeIn {

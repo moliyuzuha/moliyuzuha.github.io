@@ -38,10 +38,12 @@ function scrollAppearing() {
 // COPY E-MAIL ADDRESS
 const emailAddress = 'moliyuzuha@gmail.com';
 const copyButtonEmail = document.getElementById('copy-button-email');
-copyButtonEmail.addEventListener('click', function() {
-  navigator.clipboard.writeText(emailAddress);
-  document.getElementById('copy-success').classList.add('appear');
-  window.setTimeout(function(){
-    document.getElementById('copy-success').classList.remove('appear');
-  }, 2000);
-});
+if(copyButtonEmail != null) {
+  copyButtonEmail.addEventListener('click', function() {
+    navigator.clipboard.writeText(emailAddress);
+    document.getElementById('copy-success').classList.add('appear');
+    window.setTimeout(function(){
+      document.getElementById('copy-success').classList.remove('appear');
+    }, 2000);
+  });
+}

@@ -2,16 +2,16 @@ const worksList = [
   {
     fileName: 'addworks',
     workName: 'AddWorks',
-    lang: [
-                'HTML',
-                'CSS(Sass)',
-                'JavaScript'
-              ],
+    thumb: '/img/dummy.png',
+    lang: [ 'HTML',
+            'CSS(Sass)',
+            'JavaScript'
+          ],
     demoLink: '/',
     downloadLink: '/',
 
     mainContent: `
-    <h3>overview</h3>
+      <h3>overview</h3>
       <div class="text-area">
         <p>Webサイト向け画像・書籍ビューア設置スクリプトです。</p>
         <p>なるべく簡単な手順で作品の追加・編集ができるように作りました。<em>コードは全く書かずに、テキスト編集だけで</em>作品閲覧画面を自動生成できます。</p>
@@ -129,6 +129,24 @@ const worksList = [
           </tr>
         </table>
       </div>
+    `
+  },
+  {
+    fileName: 'moli',
+    workName: 'moli',
+    thumb: '/img/dummy.png',
+    lang: [ 'HTML',
+            'CSS(Sass)',
+            'JavaScript'
+          ],
+    demoLink: '/index.html',
+    downloadLink: '/',
+
+    mainContent: `
+    <h3>overview</h3>
+    <div class="text-area">
+      <p>当ポートフォリオサイトです。</p>
+      <p>実績を見せるために、サイト自体はモノクロ配色でシンプルなデザインに。地味にならないよう、太めボーダーでキャッチーなデザインを目指しました。</p>
     `
   }
 ]
