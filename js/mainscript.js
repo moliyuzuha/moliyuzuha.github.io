@@ -47,3 +47,15 @@ if(copyButtonEmail != null) {
     }, 2000);
   });
 }
+
+// mobile navigation
+const navButton = document.getElementById('hamburger-menu');
+navButton.addEventListener('click', mobileNav);
+function mobileNav() {
+  const navList = document.getElementById('header-nav');
+  const menuBar = document.querySelectorAll('#menu-bar');
+  for (let i = 0; i < menuBar.length; i++) {
+    menuBar[i].classList.toggle('active');
+    navList.classList.toggle('active');
+  };
+}
