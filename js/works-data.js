@@ -8,7 +8,7 @@ const worksList = [
             'JavaScript'
           ],
     demoLink: '/works/addworks/demo/work/230101/view.html',
-    downloadLink: '/',
+    downloadLink: 'https://github.com/moliyuzuha/AddWorks/tree/release',
 
     mainContent: `
       <h3>overview</h3>
