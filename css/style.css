@@ -187,6 +187,20 @@ main {
   font-size: 3rem;
 }
 
+.works-section,
+.about-section,
+.contact-section {
+  position: relative;
+}
+
+#works,
+#about,
+#contact {
+  position: absolute;
+  top: -7rem;
+  left: 0;
+}
+
 .works-section {
   width: 100%;
   padding: 2rem 0;
