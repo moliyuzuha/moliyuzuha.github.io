@@ -140,7 +140,7 @@ const worksList = [
             'JavaScript'
           ],
     demoLink: '/index.html',
-    downloadLink: 'https://github.com/moliyuzuha/moliyuzuha.github.io',
+    downloadLink: 'https://github.com/moliyuzuha/moliyuzuha.github.io/tree/release',
 
     mainContent: `
     <h3>overview</h3>
