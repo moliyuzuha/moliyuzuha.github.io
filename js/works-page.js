@@ -26,7 +26,7 @@ const languageListPosition = document.getElementById('language-list');
 languageListPosition.insertAdjacentHTML('afterbegin', languageList);
 
 // demo link
-const demoLink = `<a href="${worksList[currentFileId]['demoLink']}">demo</a>`;
+const demoLink = `<a href="${worksList[currentFileId]['demoLink']}" target="_blank">demo</a>`;
 const demoLinkPosition = document.getElementById('demo-link');
 demoLinkPosition.insertAdjacentHTML('afterbegin', demoLink);
 

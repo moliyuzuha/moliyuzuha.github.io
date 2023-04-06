@@ -2,12 +2,12 @@ const worksList = [
   {
     fileName: 'addworks',
     workName: 'AddWorks',
-    thumb: '/img/dummy.png',
+    thumb: '/works/addworks/img/thumbnail.png',
     lang: [ 'HTML',
             'CSS(Sass)',
             'JavaScript'
           ],
-    demoLink: '/',
+    demoLink: '/works/addworks/demo/work/230101/view.html',
     downloadLink: '/',
 
     mainContent: `
@@ -134,7 +134,7 @@ const worksList = [
   {
     fileName: 'moli',
     workName: 'moli',
-    thumb: '/img/dummy.png',
+    thumb: '/works/moli/img/thumbnail.png',
     lang: [ 'HTML',
             'CSS(Sass)',
             'JavaScript'
